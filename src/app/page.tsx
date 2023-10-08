@@ -41,7 +41,7 @@ export default function Home() {
               </label>
               <div className="w-full flex justify-center">
                 <button
-                  className="bg-white text-black p-2 mt-6 rounded-md"
+                  className="dark:bg-white dark:text-black light:bg-black light:text-white p-2 mt-6 rounded-md"
                   type="submit"
                 >
                   Generate
