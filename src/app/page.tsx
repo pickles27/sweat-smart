@@ -10,10 +10,10 @@ export default function Home() {
     useChat();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+    <main className="flex min-h-screen flex-col items-center justify-center p-8 sm:px-36 lg:px-56 sm:py-24">
       <div className="flex flex-col items-center w-full">
         <Image src={logo} alt="logo" priority height={200} width={200} />
-        <h1 className="text-3xl">
+        <h1 className="text-3xl text-center">
           {isLoading ? "Generating..." : "Generate your workout plan now"}
         </h1>
         <div className="mt-4 w-full">
@@ -41,7 +41,7 @@ export default function Home() {
               </label>
               <div className="w-full flex justify-center">
                 <button
-                  className="dark:bg-white dark:text-black light:bg-black light:text-white p-2 mt-6 rounded-md"
+                  className="dark:bg-white dark:text-black light:bg-black light:text-white p-2 mt-6 rounded-md w-full sm:w-fit"
                   type="submit"
                 >
                   Generate
