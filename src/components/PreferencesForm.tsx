@@ -19,7 +19,7 @@ export const PreferencesForm = ({ onFormSubmit }: PreferencesFormProps) => {
             <IntakeQuestion question={question} />
           </div>
         ))}
-        <Button type="primary" htmlType="submit">
+        <Button className="mt-3" type="primary" htmlType="submit">
           generate
         </Button>
       </Form>
