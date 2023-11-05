@@ -55,14 +55,14 @@ export enum WorkoutType {
   BodyweightTraining = "Bodyweight Training",
 }
 
-enum Split {
+export enum Split {
   FullBody = "Full Body",
   UpperLower = "Upper/Lower Body",
   PushPullLegs = "Push/Pull/Legs (PPL)",
   AnteriorPosterior = "Anterior/Posterior",
 }
 
-enum MuscleGroup {
+export enum MuscleGroup {
   Chest = "Chest",
   Back = "Back",
   Legs = "Legs",
@@ -72,11 +72,43 @@ enum MuscleGroup {
   Glutes = "Glutes",
 }
 
+export enum DayOfWeek {
+  Monday = "Monday",
+  Tuesday = "Tuesday",
+  Wednesday = "Wednesday",
+  Thursday = "Thursday",
+  Friday = "Friday",
+  Saturday = "Saturday",
+  Sunday = "Sunday",
+}
+
+export enum GymLocation {
+  Home = "Home",
+  Commercial = "Commercial",
+}
+
+export interface Option {
+  label: string;
+  value: string;
+}
+
+export enum QuestionType {
+  Radio = "Radio",
+  MultiSelect = "MultiSelect",
+}
+
+export interface Question {
+  options: Option[];
+  name: keyof PlanConstraints;
+  label: string;
+  type: QuestionType;
+}
+
 export interface PlanConstraints {
-  daysPerWeek?: boolean;
   equipment?: Equipment[];
-  isCommercialGym?: boolean;
+  gymLocation?: GymLocation;
   workoutTypes?: WorkoutType[];
   split?: Split;
   emphasis?: MuscleGroup[];
+  restDays?: DayOfWeek[];
 }
